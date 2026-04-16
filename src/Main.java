@@ -1,13 +1,40 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-  //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-  // to see how IntelliJ IDEA suggests fixing it.
-  IO.println(String.format("Hello and welcome!"));
+import javax.xml.transform.Source;
+import java.util.Scanner;
 
-  for (int i = 1; i <= 5; i++) {
-    //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-    // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-    IO.println("i = " + i);
-  }
+public class Main {
+
+    public static void main(String[] args) {
+
+        // && = AND
+        // || = OR
+        // ! = NOT
+
+        Scanner sc = new Scanner(System.in);
+
+        //o nome de usúario tem q ser menor que 12 caracateres e maior que 4
+        // não pode conter espaço
+
+        String nome;
+
+        System.out.print("Coloque o seu novo nome de úsuario: ");
+        nome = sc.next();
+
+        if (nome.length() <4 || nome.length() > 12){
+            System.out.println("O nome de úsario tem que ter no minimo 4 e no maximo 12 caracteres.");
+
+            else if (nome.contains(" ") || nome.contains("_")){
+                System.out.println("O nome de úsuario não pode conter espaços ou underlines.");
+
+            }
+
+        } else {
+            System.out.println("Olá!, " +nome);
+            
+        }
+        sc.close();
+
+
+
+
+    }
 }
